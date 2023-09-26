@@ -29,8 +29,6 @@ jobs:
       run: echo "Executing Deployment"
     - name: Deployment
       run: echo "OnceMore Executing Deployment"
-    - name: copy war files
-      run: mv /home/runner/work/MavenBuild/MavenBuild/target/java-example.war /tmp
     - name: list war files
       run: ls -ltr /tmp      
       
