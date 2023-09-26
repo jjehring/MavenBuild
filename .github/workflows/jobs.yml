@@ -38,5 +38,5 @@ jobs:
       with:
         name: my-artifact   
     - name: list war files
-      run: ls -ltr
+      run: ls -ltr | pwd
       
