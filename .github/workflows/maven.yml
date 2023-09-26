@@ -16,8 +16,8 @@ on:
     - master
     - development
     - release/*
-  schedule: 
-  - cron: "0 2 * * 1-5"
+ # schedule: 
+ # - cron: "0 2 * * 1-5"
   # add button to my workflow to run the workflow manually: "Run workflow!"
   workflow_dispatch:
 
