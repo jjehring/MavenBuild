@@ -5,6 +5,7 @@ on:
     branches: [ "master", "develop" ]
   pull_request:
     branches: [ "master" ]
+  workflow_dispatch:  
 
 jobs:
   build:
@@ -26,3 +27,5 @@ jobs:
     steps:
     - name: Deployment
       run: echo "Executing Deployment"
+    - name: Deployment
+      run: echo "OnceMore Executing Deployment"
