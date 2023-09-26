@@ -34,6 +34,9 @@ jobs:
       run: echo "Executing Deployment"
     - name: Deployment
       run: echo "OnceMore Executing Deployment"
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-artifact   
     - name: list war files
-      run: ls -ltr /tmp      
+      run: ls -ltr
       
