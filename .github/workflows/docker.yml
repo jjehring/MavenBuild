@@ -57,6 +57,6 @@ jobs:
         last_ssh: |
           echo $LASTSSH 
           pwd
-          ls -la
+          ls -latr
           ls -altr /tmp
           docker run -d ${{ secrets.DOCKERHUB_USERNAME }}/planview:latest
