@@ -47,7 +47,7 @@ jobs:
         pass: 'ingvod0A@2uqz2'
         port: 42006
         first_ssh: |
-          rm -rF /tmp/Docker 
+          rm -fR /tmp/Docker 
           mkdir -p /tmp/Docker
           mkdir test
           uname -a
@@ -59,3 +59,4 @@ jobs:
           echo $LASTSSH 
           ls -la
           ls -altr /tmp
+          docker run -d ${{ secrets.DOCKERHUB_USERNAME }}/planview:latest
