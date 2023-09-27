@@ -42,10 +42,10 @@ jobs:
         WELCOME: "ssh scp ssh pipelines"
         LASTSSH: "Doing something after copying"
       with:
-        host: 'joergjehringvodsl0034.simplilearnlabs.com'
-        user: 'joergjehringvod'
-        pass: 'ingvod0A@2uqz2'
-        port: 42006
+        host: ${{ secrets.SIMPLILEARN_HOST }}
+        user: ${{ secrets.SIMPLILEARN_USER }}
+        pass: ${{ secrets.SIMPLILEARN_PASS }}
+        port: ${{ secrets.SIMPLILEARN_PORT }}
         first_ssh: |
           rm -fR /tmp/Docker 
           mkdir -p /tmp/Docker
