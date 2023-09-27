@@ -5,8 +5,6 @@ on:
     branches: [ "master", "develop" ]
   pull_request:
     branches: [ "master" ]
-  schedule:
-     - cron: "*/10 * * * *"
 
 jobs:
   build:
@@ -37,3 +35,23 @@ jobs:
         push: true
         context: .
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/planview:latest
+        
+    - name: scp ssh pipelines
+      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+      env:
+        WELCOME: "ssh scp ssh pipelines"
+        LASTSSH: "Doing something after copying"
+      with:
+        host: 'joergjehringvodsl0034.simplilearnlabs.com'
+        user: 'joergjehringvod'
+        pass: 'ingvod0A@2uqz2'
+        port: 42006
+        first_ssh: |
+          mkdir test
+        scp: |
+          ./test/test1* => /home/github/test/test1/
+          ./test/test*.csv => "/home/github/test/test2/"
+        last_ssh: |
+          echo $LASTSSH 
+          ls -la
+https://joergjehringvodsl0034.simplilearnlabs.com:42001/guacamole/?username=guacadmin&password=guacadmin
