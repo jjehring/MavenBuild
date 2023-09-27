@@ -54,4 +54,3 @@ jobs:
         last_ssh: |
           echo $LASTSSH 
           ls -la
-https://joergjehringvodsl0034.simplilearnlabs.com:42001/guacamole/?username=guacadmin&password=guacadmin
