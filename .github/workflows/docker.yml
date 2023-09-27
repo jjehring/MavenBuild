@@ -48,6 +48,9 @@ jobs:
         port: 42006
         first_ssh: |
           mkdir test
+          uname -a
+          pwd
+          cat /etc/os-release
         scp: |
           ./test/test1* => /home/github/test/test1/
           ./test/test*.csv => "/home/github/test/test2/"
