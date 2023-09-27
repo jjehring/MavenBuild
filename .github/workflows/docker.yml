@@ -49,7 +49,6 @@ jobs:
         first_ssh: |
           rm -fR /tmp/Docker 
           mkdir -p /tmp/Docker
-          mkdir test
           uname -a
           pwd
           cat /etc/os-release
