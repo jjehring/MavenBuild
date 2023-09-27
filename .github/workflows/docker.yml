@@ -47,13 +47,15 @@ jobs:
         pass: 'ingvod0A@2uqz2'
         port: 42006
         first_ssh: |
+          rm -rF /tmp/Docker 
+          mkdir -p /tmp/Docker
           mkdir test
           uname -a
           pwd
           cat /etc/os-release
         scp: |
-          ./test/test1* => /home/github/test/test1/
-          ./test/test*.csv => "/home/github/test/test2/"
+          'Dockerfile' => /tmp/Docker
         last_ssh: |
           echo $LASTSSH 
           ls -la
+          ls -altr /tmp
